@@ -20,15 +20,28 @@ RUN apt install -y \
     curl \
     zsh
 
-RUN rm -rf /var/lib/apt/lists/*
 
 # Create a non-root user (optional but recommended)
 RUN useradd -m -s /bin/bash thomas
+
+# Install tools
+RUN apt install -y \
+    build-essential \
+    aspell aspell-en aspell-de \
+    nodejs \
+    ripgrep \
+    jq
+
+# Install Ocaml package manager
+RUN apt install -y opam
+
+# Clear up
+RUN rm -rf /var/lib/apt/lists/*
+
+# Set user
 USER thomas
 WORKDIR /home/thomas
-
 # Set default shell to bash
 SHELL ["/bin/zsh", "-c"]
-
 # Default command (optional)
 CMD ["/bin/zsh"]

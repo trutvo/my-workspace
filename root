@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+  echo "ERROR: container id mission - use 'docker ps' to find out."
+  echo "usage $0 <container-id>"
+  exit 1
+fi
+
+CONTAINER_ID=$1
+
+docker exec -u root -it $CONTAINER_ID /bin/bash
