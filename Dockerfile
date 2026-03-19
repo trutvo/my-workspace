@@ -40,8 +40,6 @@ ARG USERNAME=workspace
 RUN useradd -m -s /bin/zsh ${USERNAME}
 USER ${USERNAME}
 WORKDIR /home/${USERNAME}
-# Set default shell to bash
-#SHELL ["/bin/zsh", "-c"]
 
 COPY initialize-workspace /usr/local/bin/
 # Default command (optional)
