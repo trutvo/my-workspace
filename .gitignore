@@ -1,2 +1,5 @@
 *~
 home/
+*.img
+*.iso
+*.fd
