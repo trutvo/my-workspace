@@ -2,9 +2,11 @@
 
 set -e
 
-apt update && apt upgrade -y
-
-apt install -y \
+sudo apt update && sudo apt upgrade -y
+sudo apt install software-properties-common -y
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y \
     tmux \
     neovim \
     emacs \
@@ -16,7 +18,7 @@ apt install -y \
     nodejs \
     ripgrep \
     jq \
-    python3-venv
+    python3-venv \
     opam \
     guile-3.0 \
     pandoc
