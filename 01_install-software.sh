@@ -24,7 +24,12 @@ sudo apt install -y \
     opam \
     guile-3.0 \
     pandoc \
-    thunderbird
+    thunderbird \
+    sc-im \
+    mc \
+    gdu \
+    htop \
+    mutt
 
 sudo apt autoremove -y
 
