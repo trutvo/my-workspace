@@ -27,11 +27,11 @@ opam init --auto-setup --disable-sandboxing
 
 # define environment
 cat << EOF > $HOME/.env
-export PATH="$HOME/.bin:$HOME/.config/emacs/bin:$PATH"
+export PATH="\$HOME/.bin:\$HOME/.config/emacs/bin:\$HOME/.opam/default/bin:\$PATH"
 export EDITOR_AI=copilot
 
-source $HOME/python3/bin/activate
-source $HOME/.nvm/nvm.sh
+source \$HOME/python3/bin/activate
+source \$HOME/.nvm/nvm.sh
 
 alias e='emacs -nw'
 alias ec='emacsclient'
