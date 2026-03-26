@@ -33,9 +33,8 @@ export EDITOR_AI=copilot
 source \$HOME/python3/bin/activate
 source \$HOME/.nvm/nvm.sh
 
-alias e='emacs -nw'
-alias ec='emacsclient'
 alias ed='emacs --daemon'
+alias e='emacsclient -nw -c -a "emacs"'
 
 alias v=nvim
 
