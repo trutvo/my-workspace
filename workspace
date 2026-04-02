@@ -18,6 +18,8 @@ qemu-system-aarch64 \
   -device virtio-keyboard \
   -netdev user,id=net0,hostfwd=tcp::2222-:22 \
   -device virtio-net-pci,netdev=net0 \
+  -audiodev coreaudio,id=audio0 \
+  -device virtio-sound-pci,audiodev=audio0 \
   -boot menu=on \
 	-device qemu-xhci \
 	-device usb-kbd \
